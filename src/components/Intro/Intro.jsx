@@ -13,13 +13,21 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { Link as LinkR } from 'react-router-dom';
+
+
 const Intro = () => {
   // Transition
+
+  
   const transition = { duration: 2, type: "spring" };
 
   // context
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+
+  
 
   return (
     <div className="Intro" id="Intro">
@@ -27,11 +35,11 @@ const Intro = () => {
       <div className="i-left">
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Hi! I Am</span>
+          <span>Haziq Razak</span>
           <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
+            Fullstack Blockchain Developer with high level of experience in smart contract
+            and fullstack development. 
           </span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
@@ -39,7 +47,7 @@ const Intro = () => {
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
+          <a el="noopener noreferrer" href="https://github.com/razhzq" target="_blank"><img src={Github} alt="" /></a>
           <img src={LinkedIn} alt="" />
           <img src={Instagram} alt="" />
         </div>
@@ -75,7 +83,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
+          <FloatinDiv img={thumbup} text1="Smart Contract" text2="Developer" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
